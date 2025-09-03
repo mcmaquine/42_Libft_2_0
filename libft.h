@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/03 17:12:21 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/03 17:31:02 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
+//Novos projetos
+int		ft_printf(const char *format, ...);
+char	*get_next_line(int fd);
 #endif

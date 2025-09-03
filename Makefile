@@ -26,10 +26,10 @@ WFLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rcs $@ $(OBJS)
+	ar rcs $@ $(OBJS)
 
 bonus: $(BONUS_OBJS)
-	ar -rcs $(NAME) $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
