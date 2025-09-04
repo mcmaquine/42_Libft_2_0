@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:51:49 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/30 16:47:05 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/04 10:23:49 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		nxt = ft_lstlast(*lst);
 		nxt->next = new;
+		new->prev = nxt;
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:07:11 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/30 16:17:44 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/04 10:07:00 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;
+	new_node->prev = NULL;
 	return (new_node);
 }
