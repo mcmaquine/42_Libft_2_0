@@ -95,17 +95,17 @@ static char	*get_a_line(char *bucket)
 
 char	*get_next_line(int fd)
 {
-	static char	*bucket;
+	static char	*bucket[MAX_FD];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (!bucket)
-		bucket = (char *)ft_calloc(1, sizeof(char));
-	bucket = read_to_bucket(fd, bucket);
+		bucket[fd] = (char *)ft_calloc(1, sizeof(char));
+	bucket[fd] = read_to_bucket(fd, bucket[fd]);
 	if (!bucket)
 		return (NULL);
-	line = get_a_line(bucket);
-	bucket = update_bucket(bucket);
+	line = get_a_line(bucket[fd]);
+	bucket[fd] = update_bucket(bucket[fd]);
 	return (line);
 }
