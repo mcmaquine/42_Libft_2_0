@@ -15,7 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include <signal.h>
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
