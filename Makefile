@@ -9,30 +9,26 @@ ft_tolower.c	ft_calloc.c 	ft_strdup.c 	ft_atoi.c\
 ft_strjoin.c	ft_itoa.c		ft_substr.c		ft_strtrim.c\
 ft_split.c		ft_striteri.c	ft_strmapi.c\
 ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c\
-get_next_line.c	ft_putnbr_u.c	ft_printf.c
-
-BONUS_SRC = ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c\
+get_next_line.c	ft_putnbr_u.c	ft_printf.c ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c\
 ft_lstclear_bonus.c	ft_lstdelone_bonus.c	ft_lstiter_bonus.c\
 ft_lstlast_bonus.c	ft_lstmap_bonus.c		ft_lstnew_bonus.c\
 ft_lstsize_bonus.c
 
 OBJS = $(SRC:.c=.o)
 
-BONUS_OBJS = $(BONUS_SRC:.c=.o)
+CFLAGS = --no-warnings -g
 
-WFLAGS = -Wall -Werror -Wextra
-
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $@ $(OBJS)
 
-bonus: $(BONUS_OBJS)
-	ar rcs $(NAME) $(BONUS_OBJS)
+%.o: %.c
+	@cc $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
