@@ -89,6 +89,8 @@ static char	*get_a_line(char *bucket)
 		size = n_pos - bucket + 1;
 	else
 		size = ft_strlen(bucket);
+	if (!size)
+		return (NULL);
 	line = ft_substr(bucket, 0, size);
 	return (line);
 }
