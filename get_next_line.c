@@ -98,12 +98,12 @@ char	*get_next_line(int fd)
 	static char	*bucket[MAX_FD];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > MAX_FD)
 		return (NULL);
-	if (!bucket)
+	if (!bucket[fd])
 		bucket[fd] = (char *)ft_calloc(1, sizeof(char));
 	bucket[fd] = read_to_bucket(fd, bucket[fd]);
-	if (!bucket)
+	if (!bucket[fd])
 		return (NULL);
 	line = get_a_line(bucket[fd]);
 	bucket[fd] = update_bucket(bucket[fd]);
