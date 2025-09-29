@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 17:08:11 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/29 15:46:30 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/09/29 13:31:00 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/09/29 14:43:53 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
-Convert letters to lowercase.
-Return c if the conversion was not possible.
+Free all memory alocated in a double-pointer char terminated with NULL.
+Returns the number of pointer(s) freed.
 */
-int	ft_tolower(int c)
+int	ft_free_split(char **split)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c ^ 0x20);
-	else
-		return (c);
+	int	freed;
+
+	freed = 0;
+	if (!split)
+		return (0);
+
+	while (split[freed])
+	{
+		free(split[freed]);
+		freed++;
+	}
+	free(split);
+	return (freed);
 }

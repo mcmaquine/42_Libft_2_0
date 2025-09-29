@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 10:06:38 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/08/19 16:28:40 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/29 10:08:26 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*joined++ = *str1++;
 	while (*str2)
 		*joined++ = *str2++;
-	*joined = '\0';
 	return (start);
 }

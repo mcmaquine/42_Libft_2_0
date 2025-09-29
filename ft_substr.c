@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:55:12 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/30 12:26:20 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/29 10:06:25 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	st;
 	char	*sub;
 
-	if (!s)
+	if (!s || !len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));

@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 17:47:05 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/03 17:31:24 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/29 10:08:44 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,6 @@ static char	*get_a_line(char *bucket)
 		size = n_pos - bucket + 1;
 	else
 		size = ft_strlen(bucket);
-	if (!size)
-		return (NULL);
 	line = ft_substr(bucket, 0, size);
 	return (line);
 }
