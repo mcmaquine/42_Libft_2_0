@@ -12,23 +12,23 @@ ft_putchar_fd.c	ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c\
 get_next_line.c	ft_putnbr_u.c	ft_printf.c ft_lstadd_back_bonus.c\
 ft_lstadd_front_bonus.c	ft_lstclear_bonus.c	ft_lstdelone_bonus.c\
 ft_lstiter_bonus.c	ft_lstlast_bonus.c	ft_lstmap_bonus.c	ft_lstnew_bonus.c\
-ft_lstsize_bonus.c
+ft_lstsize_bonus.c	gnl_gc.c
 
-OBJS = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 CFLAGS = --no-warnings -g
 
 .PHONY: all clean fclean re
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $@ $(OBJS)
+$(NAME): $(OBJ)
+	ar rcs $@ $(OBJ)
 
 %.o: %.c
-	@cc $(CFLAGS) -c $< -o $@
+	@cc $(CFLAGS) -c $^ -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

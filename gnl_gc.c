@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_split.c                                    :+:      :+:    :+:   */
+/*   gnl_gc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 13:31:00 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/30 14:14:31 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/09/30 14:23:44 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/09/30 14:41:23 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Free all memory alocated in a double-pointer char terminated with NULL.
-Returns the number of pointer(s) freed.
+Calls get_next_line until its return NULL to guarantee no memory leaks.
 */
-int	ft_free_split(char **split)
-{
-	int	freed;
 
-	if (!split)
-		return (0);
-	freed = 0;
-	while (split[freed])
+void	gnl_gc(int fd)
+{
+	char	*line;
+	
+	line = get_next_line(fd);
+	while (line)
 	{
-		free(split[freed]);
-		freed++;
+		free(line);
+		line = get_next_line(fd);
 	}
-	free(split);
-	return (freed);
 }
