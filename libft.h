@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/30 14:33:27 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:46:10 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //Novos projetos
 int		ft_printf(const char *format, ...);
 char	*get_next_line(int fd);
-void	gnl_gc(int fd);
+void	gn
+l_gc(int fd);
 #endif
