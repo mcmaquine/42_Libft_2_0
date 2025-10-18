@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 1024
 # endif
 # ifndef MAX_FD
 #  define MAX_FD 8192
