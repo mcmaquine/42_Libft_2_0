@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 10:00:48 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/03 17:27:50 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:18:06 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /*
 Outputs the integer 'n' to the specified file descriptor 'fd'.
 */
-int	ft_putnbr_fd(int n, int fd)
+long	ft_putnbr_fd(long n, int fd)
 {
 	char	c;
 	long	ln;

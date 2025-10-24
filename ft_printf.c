@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 10:02:00 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/09/03 17:54:06 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:15:29 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ static int	conversion(char *c, va_list arg)
 		return (put_pointer(va_arg(arg, void *)));
 	if (*c == 'd' || *c == 'i')
 		return (ft_putnbr_fd(va_arg(arg, int), 1));
+	if (*c == 'l')
+		return (ft_putnbr_fd(va_arg(arg, long), 1));
 	if (*c == 'u')
 		return (ft_putnbr_u((unsigned int)va_arg(arg, unsigned int), 1));
 	if (*c == 'x')

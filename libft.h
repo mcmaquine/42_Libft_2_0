@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/10/01 10:42:39 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:18:17 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-int		ft_atoi(const char *nptr);
+long	ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
@@ -56,7 +56,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
 int		ft_putendl_fd(char *s, int fd);
-int		ft_putnbr_fd(int n, int fd);
+long	ft_putnbr_fd(long n, int fd);
 int		ft_putnbr_u(unsigned int n, int fd);
 
 typedef struct s_list

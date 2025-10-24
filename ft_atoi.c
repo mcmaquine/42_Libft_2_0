@@ -6,16 +6,16 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:32:24 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/10/24 15:30:09 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/24 16:05:54 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int		result;
+	long	result;
 	int		sign;
 
 	result = 0;
