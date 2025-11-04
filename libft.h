@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/10/24 16:18:17 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/26 16:57:20 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 # ifndef MAX_FD
 #  define MAX_FD 8192
 # endif
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*prev;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -58,14 +65,6 @@ int		ft_putstr_fd(char *s, int fd);
 int		ft_putendl_fd(char *s, int fd);
 long	ft_putnbr_fd(long n, int fd);
 int		ft_putnbr_u(unsigned int n, int fd);
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*prev;
-	struct s_list	*next;
-}					t_list;
-
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 15:29:50 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/07/30 15:38:02 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/10/26 20:24:53 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
