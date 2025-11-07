@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstdellast_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 13:32:24 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/11/07 15:17:45 by mmaquine         ###   ########.fr       */
+/*   Created: 2025/10/27 11:44:49 by mmaquine          #+#    #+#             */
+/*   Updated: 2025/11/04 12:42:25 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atoi(const char *nptr)
+void	ft_lstdellast(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-	long	result;
-	int		sign;
+	t_list	*last;
 
-	result = 0;
-	i = 0;
-	sign = 1;
-	while (nptr[i] && ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' '))
-		i++;
-	if (nptr[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (nptr[i] == '+')
-		i++;
-	while (nptr[i] == '0' && nptr[i])
-		i++;
-	while (nptr[i] && (nptr[i] >= '0' && nptr[i] <= '9'))
-	{
-		result = 10 * result + (nptr[i++] - '0');
-	}
-	return (result * sign);
+	last = ft_lstlast(lst);
+	while (lst->next != last)
+		lst = lst->next;
+	(*del)(last->content);
+	lst->next = NULL;
 }
