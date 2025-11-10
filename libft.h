@@ -6,7 +6,7 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2025/10/26 16:57:20 by mmaquine         ###   ########.fr       */
+/*   Updated: 2025/11/10 10:40:34 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dsize);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
