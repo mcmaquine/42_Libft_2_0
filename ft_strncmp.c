@@ -35,6 +35,12 @@ int	ft_strcmp(const char *s1, const char *s2)
 	size_t			n;
 	size_t			ns2;
 
+	if (s1 == NULL && s2 == NULL)
+		return (0);
+	if (s2 == NULL)
+		return (s1[0]);
+	if (s1 == NULL)
+		return (-s2[0]);
 	n = ft_strlen(s1);
 	ns2 = ft_strlen(s2);
 	if (ns2 > n)
