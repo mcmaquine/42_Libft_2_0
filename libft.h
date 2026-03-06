@@ -6,18 +6,21 @@
 /*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:46:16 by mmaquine          #+#    #+#             */
-/*   Updated: 2026/02/20 10:19:51 by mmaquine         ###   ########.fr       */
+/*   Updated: 2026/03/05 14:01:36 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1024
+#  define BUFFER_SIZE 1
 # endif
+
 # ifndef MAX_FD
 #  define MAX_FD 8192
 # endif
@@ -54,6 +57,7 @@ int		ft_tolower(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 long	ft_atoi(const char *nptr);
+double	ft_atod(const char *nptr);
 char	*ft_itoa(int n);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
@@ -78,6 +82,9 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	**ft_join_array_of_pointers(void **a1, void **a2);
+char	*ft_uitoa_base(unsigned long int n, char *symbols);
+
 //Projects beyond libft
 int		ft_printf(const char *format, ...);
 char	*get_next_line(int fd);

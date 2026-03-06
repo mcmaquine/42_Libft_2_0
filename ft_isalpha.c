@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <mmaquine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:12:04 by mmaquine          #+#    #+#             */
-/*   Updated: 2026/02/20 10:14:36 by mmaquine         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:21:00 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static	int	ft_isupper(int c)
 }
 
 /*
- * Return 1 if c is [a-zA-Z]
- */
+Return 1 if c is [a-zA-Z]
+*/
 int	ft_isalpha(int c)
 {
 	return (ft_islower(c) || ft_isupper(c));

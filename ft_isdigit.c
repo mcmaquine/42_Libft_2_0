@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmaquine <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mmaquine <mmaquine@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 17:16:45 by mmaquine          #+#    #+#             */
-/*   Updated: 2026/02/20 10:15:43 by mmaquine         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:23:40 by mmaquine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * Return 1 if c is a digit from [0-9]
- */
+Return 1 if c is a digit between [0-9]
+*/
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
